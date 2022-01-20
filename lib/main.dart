@@ -24,6 +24,8 @@ class Magic8ballPage extends StatefulWidget {
 class _Magic8ballPageState extends State<Magic8ballPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      color: Colors.blue,
+    );
   }
 }

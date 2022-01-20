@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(
-       MaterialApp(
+      MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: Scaffold(
+          backgroundColor: Colors.blue,
           appBar: AppBar(
             title: const Text(
               "Ask me anything",
@@ -24,8 +26,8 @@ class Magic8ballPage extends StatefulWidget {
 class _Magic8ballPageState extends State<Magic8ballPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.blue,
+    return Center(
+      child: Image.asset("images/ball1.png"),
     );
   }
 }

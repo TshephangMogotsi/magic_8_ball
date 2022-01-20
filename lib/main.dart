@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 void main() => runApp(
       MaterialApp(
@@ -24,10 +25,22 @@ class Magic8ballPage extends StatefulWidget {
 }
 
 class _Magic8ballPageState extends State<Magic8ballPage> {
+  int ballNumber = 1;
+  void updateBall() {
+    setState(() {
+      ballNumber = Random().nextInt(3) + 1;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Image.asset("images/ball1.png"),
+      child: TextButton(
+        onPressed: () {
+          updateBall();
+        },
+        child: Image.asset("images/ball$ballNumber.png"),
+      ),
     );
   }
 }
